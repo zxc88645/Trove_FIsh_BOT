@@ -1,0 +1,193 @@
+ntdll!_EPROCESS  //win10 64
+   +0x000 Pcb              : _KPROCESS
+   +0x1b8 ProcessLock      : _EX_PUSH_LOCK
+   +0x1bc RundownProtect   : _EX_RUNDOWN_REF
+   +0x1c0 VdmObjects       : Ptr32 Void
+   +0x1c4 UniqueProcessId  : Ptr32 Void
+   +0x1c8 ActiveProcessLinks : _LIST_ENTRY
+   +0x1d0 Flags2           : Uint4B
+   +0x1d0 JobNotReallyActive : Pos 0, 1 Bit
+   +0x1d0 AccountingFolded : Pos 1, 1 Bit
+   +0x1d0 NewProcessReported : Pos 2, 1 Bit
+   +0x1d0 ExitProcessReported : Pos 3, 1 Bit
+   +0x1d0 ReportCommitChanges : Pos 4, 1 Bit
+   +0x1d0 LastReportMemory : Pos 5, 1 Bit
+   +0x1d0 ForceWakeCharge  : Pos 6, 1 Bit
+   +0x1d0 CrossSessionCreate : Pos 7, 1 Bit
+   +0x1d0 NeedsHandleRundown : Pos 8, 1 Bit
+   +0x1d0 RefTraceEnabled  : Pos 9, 1 Bit
+   +0x1d0 DisableDynamicCode : Pos 10, 1 Bit
+   +0x1d0 EmptyJobEvaluated : Pos 11, 1 Bit
+   +0x1d0 DefaultPagePriority : Pos 12, 3 Bits
+   +0x1d0 PrimaryTokenFrozen : Pos 15, 1 Bit
+   +0x1d0 ProcessVerifierTarget : Pos 16, 1 Bit
+   +0x1d0 StackRandomizationDisabled : Pos 17, 1 Bit
+   +0x1d0 AffinityPermanent : Pos 18, 1 Bit
+   +0x1d0 AffinityUpdateEnable : Pos 19, 1 Bit
+   +0x1d0 PropagateNode    : Pos 20, 1 Bit
+   +0x1d0 ExplicitAffinity : Pos 21, 1 Bit
+   +0x1d0 ProcessExecutionState : Pos 22, 2 Bits
+   +0x1d0 DisallowStrippedImages : Pos 24, 1 Bit
+   +0x1d0 HighEntropyASLREnabled : Pos 25, 1 Bit
+   +0x1d0 ExtensionPointDisable : Pos 26, 1 Bit
+   +0x1d0 ForceRelocateImages : Pos 27, 1 Bit
+   +0x1d0 ProcessStateChangeRequest : Pos 28, 2 Bits
+   +0x1d0 ProcessStateChangeInProgress : Pos 30, 1 Bit
+   +0x1d0 DisallowWin32kSystemCalls : Pos 31, 1 Bit
+   +0x1d4 Flags            : Uint4B
+   +0x1d4 CreateReported   : Pos 0, 1 Bit
+   +0x1d4 NoDebugInherit   : Pos 1, 1 Bit
+   +0x1d4 ProcessExiting   : Pos 2, 1 Bit
+   +0x1d4 ProcessDelete    : Pos 3, 1 Bit
+   +0x1d4 ControlFlowGuardEnabled : Pos 4, 1 Bit
+   +0x1d4 VmDeleted        : Pos 5, 1 Bit
+   +0x1d4 OutswapEnabled   : Pos 6, 1 Bit
+   +0x1d4 Outswapped       : Pos 7, 1 Bit
+   +0x1d4 FailFastOnCommitFail : Pos 8, 1 Bit
+   +0x1d4 Wow64VaSpace4Gb  : Pos 9, 1 Bit
+   +0x1d4 AddressSpaceInitialized : Pos 10, 2 Bits
+   +0x1d4 SetTimerResolution : Pos 12, 1 Bit
+   +0x1d4 BreakOnTermination : Pos 13, 1 Bit
+   +0x1d4 DeprioritizeViews : Pos 14, 1 Bit
+   +0x1d4 WriteWatch       : Pos 15, 1 Bit
+   +0x1d4 ProcessInSession : Pos 16, 1 Bit
+   +0x1d4 OverrideAddressSpace : Pos 17, 1 Bit
+   +0x1d4 HasAddressSpace  : Pos 18, 1 Bit
+   +0x1d4 LaunchPrefetched : Pos 19, 1 Bit
+   +0x1d4 Background       : Pos 20, 1 Bit
+   +0x1d4 VmTopDown        : Pos 21, 1 Bit
+   +0x1d4 ImageNotifyDone  : Pos 22, 1 Bit
+   +0x1d4 PdeUpdateNeeded  : Pos 23, 1 Bit
+   +0x1d4 VdmAllowed       : Pos 24, 1 Bit
+   +0x1d4 ProcessRundown   : Pos 25, 1 Bit
+   +0x1d4 ProcessInserted  : Pos 26, 1 Bit
+   +0x1d4 DefaultIoPriority : Pos 27, 3 Bits
+   +0x1d4 ProcessSelfDelete : Pos 30, 1 Bit
+   +0x1d4 SetTimerResolutionLink : Pos 31, 1 Bit
+   +0x1d8 CreateTime       : _LARGE_INTEGER
+   +0x1e0 ProcessQuotaUsage : [2] Uint4B
+   +0x1e8 ProcessQuotaPeak : [2] Uint4B
+   +0x1f0 PeakVirtualSize  : Uint4B
+   +0x1f4 VirtualSize      : Uint4B
+   +0x1f8 SessionProcessLinks : _LIST_ENTRY
+   +0x200 ExceptionPortData : Ptr32 Void
+   +0x200 ExceptionPortValue : Uint4B
+   +0x200 ExceptionPortState : Pos 0, 3 Bits
+   +0x204 Token            : _EX_FAST_REF
+   +0x208 WorkingSetPage   : Uint4B
+   +0x20c AddressCreationLock : _EX_PUSH_LOCK
+   +0x210 PageTableCommitmentLock : _EX_PUSH_LOCK
+   +0x214 RotateInProgress : Ptr32 _ETHREAD
+   +0x218 ForkInProgress   : Ptr32 _ETHREAD
+   +0x21c CommitChargeJob  : Ptr32 _EJOB
+   +0x220 CloneRoot        : _RTL_AVL_TREE
+   +0x224 NumberOfPrivatePages : Uint4B
+   +0x228 NumberOfLockedPages : Uint4B
+   +0x22c Win32Process     : Ptr32 Void
+   +0x230 Job              : Ptr32 _EJOB
+   +0x234 SectionObject    : Ptr32 Void
+   +0x238 SectionBaseAddress : Ptr32 Void
+   +0x23c Cookie           : Uint4B
+   +0x240 WorkingSetWatch  : Ptr32 _PAGEFAULT_HISTORY
+   +0x244 Win32WindowStation : Ptr32 Void
+   +0x248 InheritedFromUniqueProcessId : Ptr32 Void
+   +0x24c LdtInformation   : Ptr32 Void
+   +0x250 OwnerProcessId   : Uint4B
+   +0x254 Peb              : Ptr32 _PEB
+   +0x258 Session          : Ptr32 Void
+   +0x25c AweInfo          : Ptr32 Void
+   +0x260 QuotaBlock       : Ptr32 _EPROCESS_QUOTA_BLOCK
+   +0x264 ObjectTable      : Ptr32 _HANDLE_TABLE
+   +0x268 DebugPort        : Ptr32 Void
+   +0x26c PaeTop           : Ptr32 Void
+   +0x270 DeviceMap        : Ptr32 Void
+   +0x274 EtwDataSource    : Ptr32 Void
+   +0x278 PageDirectoryPte : Uint8B
+   +0x280 ImageFileName    : [15] UChar
+   +0x28f PriorityClass    : UChar
+   +0x290 SecurityPort     : Ptr32 Void
+   +0x294 SeAuditProcessCreationInfo : _SE_AUDIT_PROCESS_CREATION_INFO
+   +0x298 JobLinks         : _LIST_ENTRY
+   +0x2a0 HighestUserAddress : Ptr32 Void
+   +0x2a4 ThreadListHead   : _LIST_ENTRY
+   +0x2ac ActiveThreads    : Uint4B
+   +0x2b0 ImagePathHash    : Uint4B
+   +0x2b4 DefaultHardErrorProcessing : Uint4B
+   +0x2b8 LastThreadExitStatus : Int4B
+   +0x2bc PrefetchTrace    : _EX_FAST_REF
+   +0x2c0 LockedPagesList  : Ptr32 Void
+   +0x2c8 ReadOperationCount : _LARGE_INTEGER
+   +0x2d0 WriteOperationCount : _LARGE_INTEGER
+   +0x2d8 OtherOperationCount : _LARGE_INTEGER
+   +0x2e0 ReadTransferCount : _LARGE_INTEGER
+   +0x2e8 WriteTransferCount : _LARGE_INTEGER
+   +0x2f0 OtherTransferCount : _LARGE_INTEGER
+   +0x2f8 CommitChargeLimit : Uint4B
+   +0x2fc CommitCharge     : Uint4B
+   +0x300 CommitChargePeak : Uint4B
+   +0x304 Vm               : _MMSUPPORT
+   +0x384 MmProcessLinks   : _LIST_ENTRY
+   +0x38c ModifiedPageCount : Uint4B
+   +0x390 ExitStatus       : Int4B
+   +0x394 VadRoot          : _RTL_AVL_TREE
+   +0x398 VadHint          : Ptr32 Void
+   +0x39c VadCount         : Uint4B
+   +0x3a0 VadPhysicalPages : Uint4B
+   +0x3a4 VadPhysicalPagesLimit : Uint4B
+   +0x3a8 AlpcContext      : _ALPC_PROCESS_CONTEXT
+   +0x3b8 TimerResolutionLink : _LIST_ENTRY
+   +0x3c0 TimerResolutionStackRecord : Ptr32 _PO_DIAG_STACK_RECORD
+   +0x3c4 RequestedTimerResolution : Uint4B
+   +0x3c8 SmallestTimerResolution : Uint4B
+   +0x3d0 ExitTime         : _LARGE_INTEGER
+   +0x3d8 ActiveThreadsHighWatermark : Uint4B
+   +0x3dc LargePrivateVadCount : Uint4B
+   +0x3e0 ThreadListLock   : _EX_PUSH_LOCK
+   +0x3e4 WnfContext       : Ptr32 Void
+   +0x3e8 Spare0           : Uint4B
+   +0x3ec SignatureLevel   : UChar
+   +0x3ed SectionSignatureLevel : UChar
+   +0x3ee Protection       : _PS_PROTECTION
+   +0x3ef HangCount        : UChar
+   +0x3f0 Flags3           : Uint4B
+   +0x3f0 Minimal          : Pos 0, 1 Bit
+   +0x3f0 ReplacingPageRoot : Pos 1, 1 Bit
+   +0x3f0 DisableNonSystemFonts : Pos 2, 1 Bit
+   +0x3f0 AuditNonSystemFontLoading : Pos 3, 1 Bit
+   +0x3f0 Crashed          : Pos 4, 1 Bit
+   +0x3f0 JobVadsAreTracked : Pos 5, 1 Bit
+   +0x3f0 VadTrackingDisabled : Pos 6, 1 Bit
+   +0x3f0 AuxiliaryProcess : Pos 7, 1 Bit
+   +0x3f0 SubsystemProcess : Pos 8, 1 Bit
+   +0x3f0 IndirectCpuSets  : Pos 9, 1 Bit
+   +0x3f0 InPrivate        : Pos 10, 1 Bit
+   +0x3f4 DeviceAsid       : Int4B
+   +0x3f8 SvmData          : Ptr32 Void
+   +0x3fc SvmProcessLock   : _EX_PUSH_LOCK
+   +0x400 SvmLock          : Uint4B
+   +0x404 SvmProcessDeviceListHead : _LIST_ENTRY
+   +0x410 LastFreezeInterruptTime : Uint8B
+   +0x418 DiskCounters     : Ptr32 _PROCESS_DISK_COUNTERS
+   +0x41c PicoContext      : Ptr32 Void
+   +0x420 KeepAliveCounter : Uint4B
+   +0x424 NoWakeKeepAliveCounter : Uint4B
+   +0x428 HighPriorityFaultsAllowed : Uint4B
+   +0x42c InstrumentationCallback : Ptr32 Void
+   +0x430 EnergyValues     : Ptr32 _PROCESS_ENERGY_VALUES
+   +0x434 VmContext        : Ptr32 Void
+   +0x438 Silo             : Ptr32 _ESILO
+   +0x43c SiloEntry        : _LIST_ENTRY
+   +0x448 SequenceNumber   : Uint8B
+   +0x450 CreateInterruptTime : Uint8B
+   +0x458 CreateUnbiasedInterruptTime : Uint8B
+   +0x460 TotalUnbiasedFrozenTime : Uint8B
+   +0x468 LastAppStateUpdateTime : Uint8B
+   +0x470 LastAppStateUptime : Pos 0, 61 Bits
+   +0x470 LastAppState     : Pos 61, 3 Bits
+   +0x478 SharedCommitCharge : Uint4B
+   +0x47c SharedCommitLock : _EX_PUSH_LOCK
+   +0x480 SharedCommitLinks : _LIST_ENTRY
+   +0x488 AllowedCpuSets   : Uint4B
+   +0x48c DefaultCpuSets   : Uint4B
+   +0x488 AllowedCpuSetsIndirect : Ptr32 Uint4B
+   +0x48c DefaultCpuSetsIndirect : Ptr32 Uint4B

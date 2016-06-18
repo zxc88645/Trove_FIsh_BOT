@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="19">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"無描述"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address/>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"無描述"</Description>
+      <LastState Value="48" RealAddress="01B5DB84"/>
+      <VariableType>Byte</VariableType>
+      <Address>01B5DB84</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"無描述"</Description>
+      <LastState Value="01B5DB84" RealAddress="0122F440"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>0122F440</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"無描述"</Description>
+      <LastState Value="01B5DB84" RealAddress="012DFBE0"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>012DFBE0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"無描述"</Description>
+      <LastState Value="84 DB B5 01 E8 87 0E 0C 00 8B 46 10 3B 73 14 75 05 89 43 14 EB 03 89 47 10 FF 75 FC 8B F0 FF 35" RealAddress="0122F440"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>32</ByteLength>
+      <Address>trove.exe+14F440</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"無描述"</Description>
+      <LastState Value="84 DB B5 01 E8 87 0E 0C 00 8B 46 10 3B 73 14 75 05 89 43 14 EB 03 89 47" RealAddress="0122F440"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>24</ByteLength>
+      <Address>trove.exe+14F448-8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"無描述"</Description>
+      <LastState Value="00 8B 46 10 3B 73 14 75 05 89 43 14 EB 03 89 47 10 FF 75 FC 8B F0 FF 35" RealAddress="0122F448"/>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>24</ByteLength>
+      <Address>trove.exe+14F448</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
